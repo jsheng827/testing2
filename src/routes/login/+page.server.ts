@@ -9,10 +9,6 @@ const client = new MongoClient(uri);
 const MoviesCollection = await getMoviesCollection()
 
 
-// export const load: PageServerLoad = async (event) => {
-// 	console.log(event)
-//   }
-
 
 export const actions = {
 	

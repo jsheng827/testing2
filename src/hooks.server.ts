@@ -8,7 +8,7 @@
     
     
     const sessionId = event.cookies.get('session_id');
-    console.log('Session ID: ',sessionId); 
+    console.log('Session ID: ',sessionId);                            //console log 
     
     
     
@@ -16,18 +16,18 @@
 
         throw redirect(303, '/');
     }
-    console.log(!unProtectedRoutes.includes(event.url.pathname));
+    console.log(!unProtectedRoutes.includes(event.url.pathname));    //console log 
 
     const urlSearchParams = new URLSearchParams(event.url.search);
    
 
-    console.log( logout.includes(event.url.pathname));  
+    console.log( logout.includes(event.url.pathname));             //console log 
 
     if (sessionId && logout.includes(event.url.pathname)) {
         event.cookies.delete('session_id', { path: '/' });
         throw redirect(303, '/');
     }
-
+                                            
 
     return resolve(event);
     

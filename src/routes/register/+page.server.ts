@@ -1,5 +1,5 @@
 import type { Actions,PageServerLoad } from './$types';
-import { getMoviesCollection } from '$lib/db'
+
 import bcrypt from 'bcryptjs'
 import { MongoClient } from "mongodb";
 
@@ -7,11 +7,6 @@ import { MongoClient } from "mongodb";
 const uri = "mongodb+srv://jsheng:Cheng1416@cluster0.hmuholi.mongodb.net/";
 const client = new MongoClient(uri);
 
-const MoviesCollection = await getMoviesCollection()
-
-export const load: PageServerLoad = async () => {
-    // todo
-  }
 
 export const actions = {
 
